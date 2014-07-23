@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @offer.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @offer.description %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @offer.created_at %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @offer.quantity %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @offer.cost %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @offer.active %>
+</p>
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>
