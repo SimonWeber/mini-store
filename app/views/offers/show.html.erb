@@ -9,10 +9,12 @@
   <%= @offer.description %>
 </p>
 
+<% if user_signed_in? %>
 <p>
   <strong><%=t ".created_at" %>:</strong>
   <%= @offer.created_at %>
 </p>
+<% end %>
 
 <p>
   <strong><%=t ".quantity" %>:</strong>
@@ -24,10 +26,13 @@
   <%= @offer.cost %>
 </p>
 
-<p>
-  <strong><%=t ".active" %>:</strong>
-  <%= @offer.active %>
-</p>
+<% if user_signed_in? %>
+  <p>
+    <strong><%=t ".active" %>:</strong>
+    <%= @offer.active %>
+  </p>
 
-<%= link_to t('button.edit'), edit_offer_path(@offer), class: 'button small right' %>
+  <%= link_to t('button.edit'), edit_offer_path(@offer), class: 'button small right' %>
+<% end %>
+
 <%= link_to t('button.back'), offers_path, class: 'button small' %>
