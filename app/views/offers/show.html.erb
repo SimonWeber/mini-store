@@ -1,34 +1,33 @@
-<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%=t ".name" %>:</strong>
   <%= @offer.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%=t ".description" %>:</strong>
   <%= @offer.description %>
 </p>
 
 <p>
-  <strong>Created at:</strong>
+  <strong><%=t ".created_at" %>:</strong>
   <%= @offer.created_at %>
 </p>
 
 <p>
-  <strong>Quantity:</strong>
+  <strong><%=t ".quantity" %>:</strong>
   <%= @offer.quantity %>
 </p>
 
 <p>
-  <strong>Cost:</strong>
+  <strong><%=t ".cost" %>:</strong>
   <%= @offer.cost %>
 </p>
 
 <p>
-  <strong>Active:</strong>
+  <strong><%=t ".active" %>:</strong>
   <%= @offer.active %>
 </p>
 
-<%= link_to 'Edit', edit_offer_path(@offer), class: 'button small right' %>
-<%= link_to 'Back', offers_path, class: 'button small' %>
+<%= link_to t('button.edit'), edit_offer_path(@offer), class: 'button small right' %>
+<%= link_to t('button.back'), offers_path, class: 'button small' %>
