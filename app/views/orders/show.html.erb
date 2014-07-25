@@ -1,0 +1,58 @@
+<p>
+  <strong><%=t ".date" %>:</strong>
+  <%= @order.date %>
+</p>
+
+<p>
+  <strong><%=t ".quantity" %>:</strong>
+  <%= @order.quantity %>x <%= @order.offer.name %>
+</p>
+
+<p>
+  <strong><%=t ".firstname" %>:</strong>
+  <%= @order.firstname %>
+</p>
+
+<p>
+  <strong><%=t ".lastname" %>:</strong>
+  <%= @order.lastname %>
+</p>
+
+<p>
+  <strong><%=t ".telephone" %>:</strong>
+  <%= @order.telephone %>
+</p>
+
+<p>
+  <strong><%=t ".email" %>:</strong>
+  <%= @order.email %>
+</p>
+
+<p>
+  <strong><%=t ".street" %>:</strong>
+  <%= @order.street %>
+</p>
+
+<p>
+  <strong><%=t ".zip" %>:</strong>
+  <%= @order.zip %>
+</p>
+
+<p>
+  <strong><%=t ".city" %>:</strong>
+  <%= @order.city %>
+</p>
+
+<p>
+  <strong><%=t ".comment" %>:</strong>
+  <%= @order.comment %>
+</p>
+
+<p>
+  <strong><%=t ".finished" %>:</strong>
+  <%= @order.finished %>
+</p>
+
+<%= link_to t('button.edit'), edit_order_path(@order), class: 'button small right' %>
+
+<%= link_to t('button.back'), orders_path, class: 'button small' %>
