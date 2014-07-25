@@ -1,0 +1,33 @@
+<% if user_signed_in? %>
+  <table>
+    <thead>
+      <tr>
+        <th><%=t ".date" %></th>
+        <th><%=t ".quantity" %></th>
+        <th><%=t ".product" %></th>
+        <th><%=t ".name" %></th>
+        <th><%=t ".comment" %></th>
+        <th><%=t ".finished" %></th>
+        <th colspan="1"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.date %></td>
+          <td><%= order.quantity %></td>
+          <td><%= order.offer.name %></td>
+          <td><%= order.lastname %>, <%= order.firstname %></td>
+          <td><%= order.comment %></td>
+          <td><%= order.finished %></td>
+          <td><%= link_to t('button.show'), show_order_path(order), class: 'button tiny' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to t('button.new'), new_order_path, class: 'button success small' %>
+<% end %>

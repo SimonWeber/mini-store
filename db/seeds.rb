@@ -10,6 +10,10 @@ case Rails.env
 when "development"
    User.create!(email: "user@example.com", password: "password")
 
+   offer = Offer.create!(name: "VW Polo 6N", description: "Auto aus dem Jahre 1998", created_at: Time.now, quantity: 1, cost: 2999.95, active: true)
+
+   Order.create!(date: Time.now, quantity: 2, firstname: "Mister", lastname: "Pancho", email: "mr.pancho@panchos.com", street: "panchostreet 12", zip: 30419, city: "panchocity", comment: "Por favor consigueme este producto y aviseme por telefono si ya esta", finished: false, offer: offer)
+
 when "production"
 
 end

@@ -7,7 +7,7 @@ de:
     show: 'Zeigen'
     new: 'Neu'
     edit: 'Bearbeiten'
-    destoy: 'Löschen'
+    destroy: 'Löschen'
     back: 'Zurück'
 
   success:
@@ -39,6 +39,20 @@ de:
       quantity: 'Menge'
       cost: 'Kosten'
       active: 'aktiv'
+
+  orders:
+    index:
+      date: 'Zeitpunkt'
+      product: 'Produkt'
+      quantity: 'Menge'
+      name: 'Name'
+      comment: 'Kommentar'
+      finished: 'Bearbeitet'
+
+  layouts:
+    administration:
+      orders: 'Bestellungen'
+      offers: 'Angebote'
 
   date:
     abbr_day_names:
