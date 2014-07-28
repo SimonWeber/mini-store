@@ -4,8 +4,8 @@
 </p>
 
 <p>
-  <strong><%=t ".quantity" %>:</strong>
-  <%= @order.quantity %>x <%= @order.offer.name %>
+  <strong><%=t ".order" %>:</strong>
+  <%= @order.quantity %>x <%= link_to @order.offer.name, @order.offer, :target => '_blank' %>
 </p>
 
 <p>

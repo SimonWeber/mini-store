@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label t ".name" %><br>
+    <%= f.label t ".name" %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label t ".description" %><br>
+    <%= f.label t ".description" %>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label t ".created_at" %><br>
-    <%= f.datetime_select :created_at %>
+    <%= f.label t ".created_at" %>
+    <%= Time.now %>
   </div>
   <div class="field">
-    <%= f.label t ".quantity" %><br>
+    <%= f.label t ".quantity" %>
     <%= f.number_field :quantity %>
   </div>
   <div class="field">
-    <%= f.label t ".cost" %><br>
+    <%= f.label t ".cost" %>
     <%= f.text_field :cost %>
   </div>
   <div class="field">
-    <%= f.label t ".active" %><br>
+    <%= f.label t ".active" %>
     <%= f.check_box :active %>
   </div>
   <div class="actions">

@@ -62,6 +62,6 @@ Rails.application.routes.draw do
   post  '/orders'          => 'orders#create'
   get   '/orders/new'      => 'orders#new', as: :new_order
   get   '/orders/:id'      => 'orders#show', as: :show_order
-  get   '/orders/:id/edit' => 'orders#index', as: :edit_order
-  patch '/orders/:id/edit' => 'orders#index'
+  get   '/orders/:id/edit' => 'orders#edit', as: :edit_order
+  patch '/orders/:id/edit' => 'orders#edit'
 end

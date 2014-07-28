@@ -27,11 +27,11 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = @offer.order.new(order_params)
+    @order = Order.new(order_params)
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Bestellung erfolgreich erstellt' }
+        format.html { redirect_to orders_path, notice: 'Bestellung erfolgreich erstellt' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }

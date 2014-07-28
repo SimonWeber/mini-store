@@ -48,6 +48,35 @@ de:
       name: 'Name'
       comment: 'Kommentar'
       finished: 'Bearbeitet'
+      fails: 'fehlt'
+
+    show:
+      date: 'Zeitpunkt'
+      order: 'Bestellung'
+      firstname: 'Vorname'
+      lastname: 'Nachname'
+      comment: 'Kommentar'
+      finished: 'Bearbeitet'
+      zip: 'Postleitzahl'
+      city: 'Stadt'
+      street: 'Straße'
+      telephone: 'Telefon'
+      email: 'E-Mail'
+
+    form:
+      date: 'Zeitpunkt'
+      order: 'Bestellung'
+      firstname: 'Vorname'
+      lastname: 'Nachname'
+      comment: 'Kommentar'
+      finished: 'Bearbeitet'
+      zip: 'Postleitzahl'
+      city: 'Stadt'
+      street: 'Straße'
+      telephone: 'Telefon'
+      email: 'E-Mail'
+      quantity: 'Menge'
+      offer: 'Angebot'
 
   layouts:
     administration:
