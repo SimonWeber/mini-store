@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20140725091555) do
     t.datetime "updated_at"
   end
 
-  add_index "orders", ["offer_id"], name: "index_orders_on_offer_id"
+  add_index "orders", ["offer_id"], name: "index_orders_on_offer_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

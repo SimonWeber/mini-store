@@ -21,7 +21,7 @@
           <td><%= order.lastname %>, <%= order.firstname %></td>
           <td><%= order.comment %></td>
           <td><%= order.finished %></td>
-          <td><%= link_to t('button.show'), show_order_path(order), class: 'button tiny' %></td>
+          <td><%= link_to t('button.show'), order_path(order), class: 'button tiny' %></td>
         </tr>
       <% end %>
     </tbody>

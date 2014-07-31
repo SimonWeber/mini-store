@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :offers
+  resources :orders
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -58,10 +59,4 @@ Rails.application.routes.draw do
   #   end
   root to: "offers#index"
 
-  get   '/orders'          => 'orders#index', as: :orders
-  post  '/orders'          => 'orders#create'
-  get   '/orders/new'      => 'orders#new', as: :new_order
-  get   '/orders/:id'      => 'orders#show', as: :show_order
-  get   '/orders/:id/edit' => 'orders#edit', as: :edit_order
-  patch '/orders/:id/edit' => 'orders#edit'
 end
