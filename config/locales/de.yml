@@ -9,6 +9,7 @@ de:
     edit: 'Bearbeiten'
     destroy: 'Löschen'
     back: 'Zurück'
+    order: 'Bestellen'
 
   success:
     save: 'Erfolgreich gespeichert'

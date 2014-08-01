@@ -49,11 +49,11 @@
     <tbody>
       <% @active_offers.each do |offer| %>
         <tr>
-          <td><%= offer.name %></td>
+          <td><%= link_to offer.name, offer_path(offer) %></td>
           <td><%= offer.description %></td>
           <td><%= offer.quantity %></td>
           <td><%= offer.cost %></td>
-          <td><%= link_to t('button.show'), offer, class: 'button tiny' %></td>
+          <td><%= link_to t('button.order'), offer, class: 'button tiny right' %></td>
         </tr>
       <% end %>
     </tbody>

@@ -7,7 +7,7 @@ class OffersController < ApplicationController
   # GET /offers.json
   def index
     @offers = Offer.all
-    @active_offers = Offer.where(active: true)
+    @active_offers = Offer.where(active: true) && Offer.where("quantity > 0")
   end
 
   # GET /offers/1
