@@ -7,7 +7,6 @@
         <th><%=t ".product" %></th>
         <th><%=t ".name" %></th>
         <th><%=t ".comment" %></th>
-        <th></th>
         <th colspan="1"></th>
       </tr>
     </thead>
@@ -15,17 +14,16 @@
     <tbody>
       <% @orders.each do |order| %>
         <tr>
-          <td><%= order.received_at %></td>
+          <td><%= link_to order.received_at, order_path(order) %></td>
           <td><%= order.quantity %></td>
-          <td><%= order.offer.name %></td>
+          <td><%= order.offer.name if order.offer.present? %></td>
           <td><%= order.lastname %>, <%= order.firstname %></td>
           <td><%= order.comment %></td>
           <% if order.finished == true %>
-            <td><i class="fa fa-thumbs-up fa-2x"></i></td>
+            <td><%= link_to(fa_icon("thumbs-up 2x"), order_path(order)) %></td>
           <% else %>
-            <td><i class="fa fa-spinner fa-spin fa-2x"></i></td>
+            <td><%= link_to(fa_icon("spinner spin 2x"), order_path(order)) %></td>
           <% end %>
-          <td><%= link_to t('button.show'), order_path(order), class: 'button tiny' %></td>
         </tr>
       <% end %>
     </tbody>

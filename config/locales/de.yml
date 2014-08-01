@@ -22,7 +22,7 @@ de:
       created_at: 'Erstellt am'
       quantity: 'Menge'
       cost: 'Kosten'
-      active: 'aktiv'
+      active: 'Aktiv'
 
     form:
       name: 'Name'
@@ -30,7 +30,7 @@ de:
       created_at: 'Erstellt am'
       quantity: 'Menge'
       cost: 'Kosten'
-      active: 'aktiv'
+      active: 'Aktiv'
 
     show:
       name: 'Name'
@@ -38,7 +38,7 @@ de:
       created_at: 'Erstellt am'
       quantity: 'Menge'
       cost: 'Kosten'
-      active: 'aktiv'
+      active: 'Aktiv'
 
   orders:
     index:

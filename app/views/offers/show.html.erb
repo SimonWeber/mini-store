@@ -29,10 +29,17 @@
 <% if user_signed_in? %>
   <p>
     <strong><%=t ".active" %>:</strong>
-    <%= @offer.active %>
+    <% if @offer.active == true %>
+      <td><i class="fa fa-check-circle fa-2x"></i></td>
+    <% else %>
+       <td><i class="fa fa-times-circle fa-2x"></i></td>
+    <% end %>
   </p>
-
-  <%= link_to t('button.edit'), edit_offer_path(@offer), class: 'button small right' %>
+  <div class="right">
+    <%= link_to t('button.edit'), edit_offer_path(@offer), class: 'button small' %>
+    <%= link_to t('button.destroy'), @offer, method: :delete,
+    data: { confirm: 'Sind Sie sicher?' }, class: 'button alert small' %>
+  </div>
 <% end %>
 
 <%= link_to t('button.back'), offers_path, class: 'button small' %>
