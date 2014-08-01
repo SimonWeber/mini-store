@@ -1,0 +1,15 @@
+de:
+  simple_form:
+    "yes": 'Ja'
+    "no": 'Nein'
+    choose: 'Bitte auswählen'
+    required:
+      text: 'benötigt'
+      mark: '*'
+    error_notification:
+      default_message: 'Sichten Sie bitte untenstehenden Probleme:'
+
+    labels:
+      order:
+        offer: 'Angebot'
+        received_at: 'Eingegangen am'

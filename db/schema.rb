@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140725091555) do
   end
 
   create_table "orders", force: true do |t|
-    t.datetime "date"
+    t.datetime "received_at"
     t.integer  "quantity"
     t.string   "firstname"
     t.string   "lastname"

@@ -11,15 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field large-12 columns">
-    <%= f.label t ".date" %>
-    <%= f.datetime_select :date %>
+  <div class="field large-4 columns">
+    <%= f.input :received_at,
+    as: :string,
+    input_html: { class: 'timepicker' } %>
   </div>
-  <div class="field large-6 columns">
+  <div class="field large-4 columns">
     <%= f.label t ".quantity" %>
-    <%= f.text_field :quantity %>
+    <%= f.number_field :quantity %>
   </div>
-  <div class="field large-6 columns">
+  <div class="field large-4 columns">
     <%= f.association :offer %>
   </div>
   <div class="field large-6 columns">
@@ -38,15 +39,15 @@
     <%= f.label t ".email" %>
     <%= f.text_field :email %>
   </div>
-  <div class="field large-12 columns">
+  <div class="field large-4 columns">
     <%= f.label t ".street" %>
     <%= f.text_field :street %>
   </div>
-  <div class="field large-6 columns">
+  <div class="field large-4 columns">
     <%= f.label t ".zip" %>
     <%= f.text_field :zip %>
   </div>
-  <div class="field large-6 columns">
+  <div class="field large-4 columns">
     <%= f.label t ".city" %>
     <%= f.text_field :city %>
   </div>

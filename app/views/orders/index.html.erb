@@ -2,7 +2,7 @@
   <table>
     <thead>
       <tr>
-        <th><%=t ".date" %></th>
+        <th><%=t ".received_at" %></th>
         <th><%=t ".quantity" %></th>
         <th><%=t ".product" %></th>
         <th><%=t ".name" %></th>
@@ -15,7 +15,7 @@
     <tbody>
       <% @orders.each do |order| %>
         <tr>
-          <td><%= order.date %></td>
+          <td><%= order.received_at %></td>
           <td><%= order.quantity %></td>
           <td><%= order.offer.name %></td>
           <td><%= order.lastname %>, <%= order.firstname %></td>

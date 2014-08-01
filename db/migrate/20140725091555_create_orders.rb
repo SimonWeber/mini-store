@@ -1,7 +1,7 @@
 class CreateOrders < ActiveRecord::Migration
   def change
     create_table :orders do |t|
-      t.timestamp :date
+      t.timestamp :received_at
       t.integer :quantity
       t.string :firstname
       t.string :lastname

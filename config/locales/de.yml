@@ -42,7 +42,7 @@ de:
 
   orders:
     index:
-      date: 'Zeitpunkt'
+      received_at: 'Eingegangen am'
       product: 'Produkt'
       quantity: 'Menge'
       name: 'Name'
@@ -51,7 +51,7 @@ de:
       fails: 'fehlt'
 
     show:
-      date: 'Zeitpunkt'
+      received_at: 'Eingegangen am'
       order: 'Bestellung'
       firstname: 'Vorname'
       lastname: 'Nachname'
@@ -64,7 +64,7 @@ de:
       email: 'E-Mail'
 
     form:
-      date: 'Zeitpunkt'
+      date: 'Eingegangen am'
       order: 'Bestellung'
       firstname: 'Vorname'
       lastname: 'Nachname'
