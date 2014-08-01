@@ -1,5 +1,7 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+
 
   # GET /offers
   # GET /offers.json
@@ -69,6 +71,13 @@ class OffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_params
-      params.require(:offer).permit(:name, :description, :created_at, :quantity, :cost, :active)
+      params.require(:offer).permit(
+        :name,
+        :description,
+        :created_at,
+        :quantity,
+        :cost,
+        :active
+      )
     end
 end

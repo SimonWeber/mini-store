@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2014-07-25 11:15:55
+  quantity: 1
+  firstname: MyString
+  lastname: MyString
+  telephone: MyString
+  email: MyString
+  street: MyText
+
+two:
+  date: 2014-07-25 11:15:55
+  quantity: 1
+  firstname: MyString
+  lastname: MyString
+  telephone: MyString
+  email: MyString
+  street: MyText

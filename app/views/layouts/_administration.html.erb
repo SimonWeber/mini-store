@@ -7,6 +7,13 @@
   </ul>
 
   <section class="top-bar-section">
+    <ul class="left">
+      <li class="<%= 'active' if current_controller?('offers') %>">
+        <%= link_to t('.offers'), offers_path %></li>
+      <li class="<%= 'active' if current_controller?('orders') %>">
+        <%= link_to t('.orders'), orders_path %></li>
+    </ul>
+
 
     <ul class="right">
       <li><%= link_to current_user.email %></li>

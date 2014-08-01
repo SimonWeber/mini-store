@@ -1,0 +1,64 @@
+<%= simple_form_for @order do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @order.errors.count %> Fehler beim Erstellen einer Bestellung aufgetreten</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field large-12 columns">
+    <%= f.label t ".date" %>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field large-6 columns">
+    <%= f.label t ".quantity" %>
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field large-6 columns">
+    <%= f.association :offer %>
+  </div>
+  <div class="field large-6 columns">
+    <%= f.label t ".firstname" %>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field large-6 columns">
+    <%= f.label t ".lastname" %>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field large-6 columns">
+    <%= f.label t ".telephone" %>
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field large-6 columns">
+    <%= f.label t ".email" %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field large-12 columns">
+    <%= f.label t ".street" %>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field large-6 columns">
+    <%= f.label t ".zip" %>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field large-6 columns">
+    <%= f.label t ".city" %>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field large-12 columns">
+    <%= f.label t ".comment" %>
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field large columns">
+    <%= f.label t ".finished" %>
+    <%= f.check_box :finished %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Aktualisieren', class: 'button small success right' %>
+  </div>
+<% end %>
