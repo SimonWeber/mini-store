@@ -7,7 +7,7 @@
         <th><%=t ".created_at" %></th>
         <th><%=t ".quantity" %></th>
         <th><%=t ".cost" %></th>
-        <th><%=t ".active" %></th>
+        <th></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -20,7 +20,11 @@
           <td><%= offer.created_at %></td>
           <td><%= offer.quantity %></td>
           <td><%= offer.cost %></td>
-          <td><%= offer.active %></td>
+          <% if offer.active == true %>
+            <td><i class="fa fa-check-circle fa-2x"></i></td>
+          <% else %>
+            <td><i class="fa fa-times-circle fa-2x"></i></td>
+          <% end %>
           <td><%= link_to t('button.show'), offer, class: 'button tiny' %></td>
           <td><%= link_to t('button.edit'), edit_offer_path(offer), class: 'button tiny' %></td>
           <td><%= link_to t('button.destroy'), offer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button alert tiny' %></td>

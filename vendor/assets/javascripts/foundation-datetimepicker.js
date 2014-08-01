@@ -112,7 +112,7 @@
     if (this.isRTL){
       this.picker.addClass('datetimepicker-rtl');
       this.picker.find('.prev i, .next i')
-            .toggleClass('icon-chevron-left icon-chevron-right');
+            .toggleClass('fa fa-chevron-left fa fa-chevron-right');
     }
     $(document).on('mousedown', function (e) {
       // Clicked outside the datetimepicker, hide it
@@ -1182,9 +1182,9 @@
     },
     headTemplate: '<thead>'+
               '<tr>'+
-                '<th class="prev"><i class="icon-chevron-left"/></th>'+
+                '<th class="prev"><i class="fa fa-chevron-left"/></th>'+
                 '<th colspan="5" class="switch"></th>'+
-                '<th class="next"><i class="icon-chevron-right"/></th>'+
+                '<th class="next"><i class="fa fa-chevron-right"/></th>'+
               '</tr>'+
             '</thead>',
     contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
