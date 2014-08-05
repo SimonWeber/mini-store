@@ -59,4 +59,7 @@ Rails.application.routes.draw do
   #   end
   root to: "offers#index"
 
+  get   'users/settings' => 'users#settings', as: :user_settings
+  patch 'users/settings' => 'users#update_settings'
+
 end

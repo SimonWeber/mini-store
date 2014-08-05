@@ -16,7 +16,7 @@
 
 
     <ul class="right">
-      <li><%= link_to current_user.email %></li>
+      <li><%= link_to(fa_icon("cog"), user_settings_path) %></li>
       <li class='divider'></li>
       <li><%= link_to 'Abmelden', destroy_user_session_path, method: :delete %></li>
     </ul>
