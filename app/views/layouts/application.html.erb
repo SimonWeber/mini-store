@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=1000" />
 
     <title><%= content_for?(:title) ? yield(:title) : "Mini Store" %></title>
 
@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div class="row">
+    <div class="row" id="content">
       <div class="large-12 small-12 columns">
         <%= render 'layouts/administration' if user_signed_in? %>
 
