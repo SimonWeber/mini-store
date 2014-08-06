@@ -1,0 +1,26 @@
+<h2><%=t 'users.title' %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><%=t "users.email" %></th>
+      <th><%=t "users.current_sign_in" %></th>
+      <th><%=t "users.last_sign_in" %></th>
+      <th><%=t "users.created_at" %></th>
+      <th><%=t "users.sign_in_count" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.current_sign_in_at %><br><%= user.current_sign_in_ip %></td>
+        <td><%= user.last_sign_in_at %><br><%= user.last_sign_in_ip %></td>
+        <td><%= user.created_at %></td>
+        <td><%= user.sign_in_count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('button.back'), user_settings_path, class: 'button small' %>

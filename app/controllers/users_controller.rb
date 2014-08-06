@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @users = User.order("email ASC")
+  end
+
   def settings
   end
 
@@ -22,7 +26,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-      :name,
       :email,
       :password,
       :password_confirmation

@@ -10,6 +10,7 @@ de:
     destroy: 'Löschen'
     back: 'Zurück'
     order: 'Bestellen'
+    save: 'Speichern'
 
   success:
     save: 'Erfolgreich gespeichert'
@@ -79,10 +80,21 @@ de:
       quantity: 'Menge'
       offer: 'Angebot'
 
+  users:
+    email: 'E-Mail'
+    title: 'Benutzerverwaltung'
+    current_sign_in: 'Aktueller Login'
+    last_sign_in: 'Letzer Login'
+    created_at: 'Erstellt am'
+    sign_in_count: 'Logins'
+    update:
+      success: 'Passwort erfolgreich geändert'
+
   layouts:
     administration:
       orders: 'Bestellungen'
       offers: 'Angebote'
+      users: 'Benutzer'
 
   date:
     abbr_day_names:

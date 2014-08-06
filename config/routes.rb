@@ -61,5 +61,6 @@ Rails.application.routes.draw do
 
   get   'users/settings' => 'users#settings', as: :user_settings
   patch 'users/settings' => 'users#update_settings'
+  get   'users'          => 'users#index', as: :users
 
 end
