@@ -1,4 +1,6 @@
-<h2><%=t 'users.title' %></h2>
+<div class="large-12 columns">
+  <h2><%= link_to(fa_icon("caret-left"), user_settings_path) %> <%=t 'users.title' %></h2>
+</div>
 
 <table>
   <thead>
@@ -22,5 +24,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('button.back'), user_settings_path, class: 'button small' %>

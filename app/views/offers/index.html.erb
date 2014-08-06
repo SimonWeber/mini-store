@@ -1,4 +1,10 @@
 <% if user_signed_in? %>
+  <div class="large-12 columns">
+    <div class="space">
+      <%= link_to(fa_icon("plus-square 2x"), new_offer_path) %>
+    </div>
+  </div>
+
   <table>
     <thead>
       <tr>
@@ -28,11 +34,6 @@
       <% end %>
     </tbody>
   </table>
-
-  <br>
-
-  <%= link_to t('button.new'), new_offer_path, class: 'button success small' %>
-
 <% else %>
 
   <table>
@@ -40,7 +41,6 @@
       <tr>
         <th><%=t ".name" %></th>
         <th><%=t ".description" %></th>
-        <th><%=t ".quantity" %></th>
         <th><%=t ".cost" %></th>
         <th colspan="1"></th>
       </tr>
@@ -51,7 +51,6 @@
         <tr>
           <td><%= link_to offer.name, offer_path(offer) %></td>
           <td><%= offer.description %></td>
-          <td><%= offer.quantity %></td>
           <td><%= offer.cost %></td>
           <td><%= link_to t('button.order'), offer, class: 'button tiny right' %></td>
         </tr>

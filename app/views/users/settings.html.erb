@@ -1,21 +1,23 @@
-<h2>Einstellungen</h2>
+<div class="large-12 columns">
+  <h2>Einstellungen</h2>
 
-<p>Eingeloggt als <%= current_user.email %></p>
-<p>Logins: <%= current_user.sign_in_count %></p>
-<p>Erstellt: <%= current_user.created_at %></p>
-<%= link_to 'Benutzerverwaltung', users_path, class: 'button small' %>
+  <p>Eingeloggt als <%= current_user.email %></p>
+  <p>Logins: <%= current_user.sign_in_count %></p>
+  <p>Erstellt: <%= current_user.created_at %></p>
+  <%= link_to 'Benutzerverwaltung', users_path, class: 'button small' %>
 
-<%= simple_form_for current_user, as: :user, url: user_settings_path do |f| %>
+  <%= simple_form_for current_user, as: :user, url: user_settings_path do |f| %>
 
-  <% if notification = f.error_notification %>
-    <div class="alert-message"><%= notification %></div>
+    <% if notification = f.error_notification %>
+      <div class="alert-message"><%= notification %></div>
+    <% end %>
+
+    <%= f.input :password %>
+
+    <%= f.input :password_confirmation %>
+
+    <div class="right">
+      <%= f.submit 'Speichern', class: 'button small success', data: { confirm: 'Passwort ändern?' }%>
+    </div>
   <% end %>
-
-  <%= f.input :password %>
-
-  <%= f.input :password_confirmation %>
-
-  <div class="right">
-    <%= f.submit 'Speichern', class: 'button small success', data: { confirm: 'Passwort ändern?' }%>
-  </div>
-<% end %>
+</div>

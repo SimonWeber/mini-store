@@ -1,66 +1,65 @@
-<p>
-  <strong><%=t ".received_at" %>:</strong>
-  <%= @order.received_at %>
-</p>
+  <div class="large-12 columns">
+    <h2><%= link_to(fa_icon("caret-left"), orders_path) %> <%= @order.quantity %>x <%= @order.offer.name if @order.offer.present? %> <%= "für " + @order.lastname if @order.lastname.present? %></h2>
+  <p>
+    <strong><%=t ".received_at" %>:</strong>
+    <%= @order.received_at %>
+  </p>
 
-<p>
-  <strong><%=t ".order" %>:</strong>
-  <%= @order.quantity %>x <%= link_to @order.offer.name, @order.offer, :target => '_blank' if @order.offer.present? %>
-</p>
+  <p>
+    <strong><%=t ".order" %>:</strong>
+    <%= @order.quantity %>x <%= link_to @order.offer.name, @order.offer, :target => '_blank' if @order.offer.present? %>
+  </p>
 
-<p>
-  <strong><%=t ".firstname" %>:</strong>
-  <%= @order.firstname %>
-</p>
+  <p>
+    <strong><%=t ".firstname" %>:</strong>
+    <%= @order.firstname %>
+  </p>
 
-<p>
-  <strong><%=t ".lastname" %>:</strong>
-  <%= @order.lastname %>
-</p>
+  <p>
+    <strong><%=t ".lastname" %>:</strong>
+    <%= @order.lastname %>
+  </p>
 
-<p>
-  <strong><%=t ".telephone" %>:</strong>
-  <%= @order.telephone %>
-</p>
+  <p>
+    <strong><%=t ".telephone" %>:</strong>
+    <%= @order.telephone %>
+  </p>
 
-<p>
-  <strong><%=t ".email" %>:</strong>
-  <%= @order.email %>
-</p>
+  <p>
+    <strong><%=t ".email" %>:</strong>
+    <%= @order.email %>
+  </p>
 
-<p>
-  <strong><%=t ".street" %>:</strong>
-  <%= @order.street %>
-</p>
+  <p>
+    <strong><%=t ".street" %>:</strong>
+    <%= @order.street %>
+  </p>
 
-<p>
-  <strong><%=t ".zip" %>:</strong>
-  <%= @order.zip %>
-</p>
+  <p>
+    <strong><%=t ".zip" %>:</strong>
+    <%= @order.zip %>
+  </p>
 
-<p>
-  <strong><%=t ".city" %>:</strong>
-  <%= @order.city %>
-</p>
+  <p>
+    <strong><%=t ".city" %>:</strong>
+    <%= @order.city %>
+  </p>
 
-<p>
-  <strong><%=t ".comment" %>:</strong>
-  <%= @order.comment %>
-</p>
+  <p>
+    <strong><%=t ".comment" %>:</strong>
+    <%= @order.comment %>
+  </p>
 
-<p>
-  <strong><%=t ".finished" %>:</strong>
-  <% if @order.finished == true %>
-    <td><i class="fa fa-thumbs-up fa-2x"></i></td>
-  <% else %>
-    <td><i class="fa fa-spinner fa-spin fa-2x"></i></td>
-  <% end %>
-</p>
+  <p>
+    <strong><%=t ".finished" %>:</strong>
+    <% if @order.finished == true %>
+      <td><i class="fa fa-thumbs-up fa-2x"></i></td>
+    <% else %>
+      <td><i class="fa fa-spinner fa-spin fa-2x"></i></td>
+    <% end %>
+  </p>
 
-<div class="right">
   <%= link_to t('button.edit'), edit_order_path(@order), class: 'button small' %>
   <%= link_to t('button.destroy'), @order, method: :delete,
-    data: { confirm: 'Sind Sie sicher?' }, class: 'button alert small' %>
+    data: { confirm: 'Sind Sie sicher?' }, class: 'button alert small right' %>
 </div>
-
-<%= link_to t('button.back'), orders_path, class: 'button small' %>

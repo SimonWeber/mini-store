@@ -41,6 +41,19 @@ de:
       quantity: 'Menge'
       cost: 'Kosten'
       active: 'Aktiv'
+      date: 'Eingegangen am'
+      order: 'Bestellung'
+      firstname: 'Vorname'
+      lastname: 'Nachname'
+      comment: 'Kommentar'
+      finished: 'Fortschri'
+      zip: 'Postleitzahl'
+      city: 'Stadt'
+      street: 'Straße / Hausnr.'
+      telephone: 'Telefon'
+      email: 'E-Mail'
+      quantity: 'Menge'
+      offer: 'Angebot'
 
   orders:
     index:
@@ -74,7 +87,7 @@ de:
       finished: 'Bearbeitet'
       zip: 'Postleitzahl'
       city: 'Stadt'
-      street: 'Straße'
+      street: 'Straße / Hausnr.'
       telephone: 'Telefon'
       email: 'E-Mail'
       quantity: 'Menge'

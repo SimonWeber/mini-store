@@ -1,3 +1,5 @@
-<%= render 'form' %>
+<div class="large-12 columns">
+  <h2><%= link_to(fa_icon("caret-left"), order_path(@order)) %> Bestellung bearbeiten</h2>
 
-<%= link_to t('button.back'), orders_path, class: 'button small' %>
+  <%= render 'form' %>
+</div>
