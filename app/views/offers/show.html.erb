@@ -1,5 +1,10 @@
 <div class="large-6 columns">
   <h2><%= link_to(fa_icon("caret-left"), offers_path) %> <%= @offer.name %></h2>
+
+  <p>
+    <%= image_tag @offer.image.url(:medium) if @offer.image.present? %>
+  </p>
+
   <p>
     <strong><%=t ".description" %>:</strong>
     <%= @offer.description %>

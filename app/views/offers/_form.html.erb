@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= image_tag @offer.image.url(:medium) if @offer.image.present? %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
     <%= f.label t ".name" %>
     <%= f.text_field :name %>
   </div>
