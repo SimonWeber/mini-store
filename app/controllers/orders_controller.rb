@@ -1,12 +1,12 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
+  helper_method :sort_column, :sort_direction
 
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.joins(:offer).order(sort_column + " " + sort_direction)
   end
 
 
@@ -66,6 +66,15 @@ class OrdersController < ApplicationController
 
 
   private
+
+    def sort_column
+      params[:sort] || "received_at"
+    end
+
+    def sort_direction
+      params[:direction] || "asc"
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_order
       @order = Order.find(params[:id])

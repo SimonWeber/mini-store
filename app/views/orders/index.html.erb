@@ -1,18 +1,18 @@
 <% if user_signed_in? %>
   <div class="large-12 columns">
-    <div class="space">
+    <div class="bottom-space">
       <%= link_to(fa_icon("plus-square 2x"), new_order_path) %>
     </div>
   </div>
   <table>
     <thead>
       <tr>
-        <th><%=t ".received_at" %></th>
-        <th><%=t ".quantity" %></th>
-        <th><%=t ".product" %></th>
-        <th><%=t ".name" %></th>
-        <th><%=t ".comment" %></th>
-        <th colspan="1"></th>
+        <th><%= sortable "received_at", (t ".received_at") %></th>
+        <th><%= sortable "quantity", (t ".quantity") %></th>
+        <th><%= sortable "name", (t "offer") %></th>
+        <th><%= sortable "lastname", (t ".name") %></th>
+        <th><%= sortable "comment", (t ".comment") %></th>
+        <th></th>
       </tr>
     </thead>
 
@@ -22,7 +22,12 @@
           <td><%= link_to order.received_at, order_path(order) %></td>
           <td><%= order.quantity %></td>
           <td><%= order.offer.name if order.offer.present? %></td>
-          <td><%= order.lastname %>, <%= order.firstname %></td>
+          <td>
+            <% if order.firstname.present? %>
+              <%= order.firstname %>
+            <% end %>
+            <b><%= order.lastname %></b>
+          </td>
           <td><%= order.comment %></td>
           <% if order.finished == true %>
             <td><%= link_to(fa_icon("thumbs-up 2x"), order_path(order)) %></td>
