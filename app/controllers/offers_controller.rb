@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :create_order]
 
 
   # GET /offers
@@ -65,6 +65,21 @@ class OffersController < ApplicationController
     end
   end
 
+  def create_order
+    @order = Order.new(order_params)
+    @offer = Offer.find(params[:id])
+
+    respond_to do |format|
+      if @order.save
+        format.html { redirect_to @offer, notice: 'Anfrage versendet! Es wird sich in den kommenden Tagen jemand von uns bei Ihnen melden' }
+        format.json { render :index, status: :created, location: @offer }
+      else
+        format.html { render :show }
+        format.json { render json: @order.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_offer
@@ -81,6 +96,23 @@ class OffersController < ApplicationController
       :quantity,
       :cost,
       :active
+    )
+  end
+
+  def order_params
+    params.require(:order).permit(
+      :quantity,
+      :received_at,
+      :firstname,
+      :lastname,
+      :telephone,
+      :email,
+      :street,
+      :zip,
+      :city,
+      :comment,
+      :finished,
+      :offer_id
     )
   end
 end

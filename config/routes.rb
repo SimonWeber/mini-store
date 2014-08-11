@@ -59,6 +59,8 @@ Rails.application.routes.draw do
   #   end
   root to: "offers#index"
 
+  post 'offers/:id' => 'offers#create_order', as: :create_order
+
   get   'users/settings' => 'users#settings', as: :user_settings
   patch 'users/settings' => 'users#update_settings'
   get   'users'          => 'users#index', as: :users
