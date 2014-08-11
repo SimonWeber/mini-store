@@ -1,12 +1,13 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show, :create_order]
+  helper_method :sort_column, :sort_direction
 
 
   # GET /offers
   # GET /offers.json
   def index
-    @offers = Offer.all
+    @offers = Offer.order(sort_column + " " + sort_direction)
     @active_offers = Offer.where(active: true)
   end
 
@@ -85,6 +86,15 @@ class OffersController < ApplicationController
   def set_offer
     @offer = Offer.find(params[:id])
   end
+
+  def sort_column
+    params[:sort] || "active"
+  end
+
+  def sort_direction
+    params[:direction] || "desc"
+  end
+
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def offer_params

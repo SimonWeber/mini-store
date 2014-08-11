@@ -9,11 +9,11 @@
     <thead>
       <tr>
         <th></th>
-        <th><%=t ".name" %></th>
-        <th><%=t ".description" %></th>
-        <th><%=t ".created_at" %></th>
-        <th><%=t ".quantity" %></th>
-        <th><%=t ".cost" %></th>
+        <th><%= sortable "name", (t ".name") %></th>
+        <th><%= sortable "description", (t ".description") %></th>
+        <th><%= sortable "created_at", (t ".created_at") %></th>
+        <th><%= sortable "quantity", (t ".quantity") %></th>
+        <th><%= sortable "cost", (t ".cost") %></th>
         <th colspan="1"></th>
       </tr>
     </thead>
