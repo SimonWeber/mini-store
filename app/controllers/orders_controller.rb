@@ -72,7 +72,7 @@ class OrdersController < ApplicationController
     end
 
     def sort_direction
-      params[:direction] || "asc"
+      params[:direction] || "desc"
     end
 
     # Use callbacks to share common setup or constraints between actions.
