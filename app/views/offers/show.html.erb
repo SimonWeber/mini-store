@@ -44,7 +44,7 @@
     <%= simple_form_for @order, url: create_order_path, :method => 'post' do |f| %>
       <% if @order.errors.any? %>
         <div id="error_explanation">
-          <h2><%= @order.errors.count %> Fehler beim Erstellen einer Bestellung aufgetreten</h2>
+          <h2><%= @order.errors.count %> Fehler bei der Bestellung</h2>
 
           <ul>
           <% @order.errors.full_messages.each do |message| %>
