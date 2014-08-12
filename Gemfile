@@ -44,3 +44,10 @@ gem 'devise', '~> 3.2.4'
 gem 'simple_form'
 gem 'font-awesome-rails', '~> 4.0.3.1'
 gem 'paperclip', '~> 4.1'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'shoulda', '~> 3.5.0'
+  gem 'simplecov', '~> 0.8.2', require: false
+  gem 'factory_girl_rails', '~> 4.4.0'
+end
