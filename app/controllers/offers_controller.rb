@@ -33,7 +33,7 @@ class OffersController < ApplicationController
 
     respond_to do |format|
       if @offer.save
-        format.html { redirect_to @offer, notice: 'Angebot erfolgreich erstellt' }
+        format.html { redirect_to offers_path, notice: 'Angebot erfolgreich erstellt' }
         format.json { render :show, status: :created, location: @offer }
       else
         format.html { render :new }

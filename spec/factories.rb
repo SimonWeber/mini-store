@@ -17,7 +17,7 @@ FactoryGirl.define do
     street "Panchostreet 1"
     zip "30625"
     city "Panchocity"
-    association :offer
+    offer
   end
 
   factory :user do
