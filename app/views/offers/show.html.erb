@@ -23,7 +23,7 @@
 
   <p>
     <strong><%=t ".cost" %>:</strong>
-    <%= @offer.cost %>
+    <%= number_to_currency( @offer.cost, locale: :de) %>
   </p>
 
   <% if user_signed_in? %>
